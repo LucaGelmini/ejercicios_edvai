@@ -1,0 +1,1 @@
+wget -P https://data-engineer-edvai.s3.amazonaws.com/yellow_tripdata_2021-01.parquet ./
