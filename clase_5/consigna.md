@@ -3,14 +3,9 @@
    guarde en /home/nifi/ingest.
    Ejecutarlo.
 2. Por medio de la interfaz gráfica de Nifi, crear un job que tenga dos procesos.
-   a) GetFile para obtener el archivo del punto 1 (/home/nifi/ingest)
-   b) putHDFS para ingestarlo a HDFS (directorio nifi)
-3. Con el archivo ya ingestado en HDFS/nifi, escribir las consultas y agregar captura de
-   pantalla del resultado. Para los ejercicios puedes usar SQL mediante la creación de una
-   vista llamada yellow_tripdata.
-   También debes chequear el diccionario de datos por cualquier duda que tengas
-   respecto a las columnas del archivo
-   https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
+   a. GetFile para obtener el archivo del punto 1 (/home/nifi/ingest)
+   b. putHDFS para ingestarlo a HDFS (directorio nifi)
+3. Con el archivo ya ingestado en HDFS/nifi, escribir las consultas y agregar captura de pantalla del resultado. Para los ejercicios puedes usar SQL mediante la creación de una vista llamada yellow_tripdata. También debes chequear el diccionario de datos por cualquier duda que tengas respecto a las columnas del archivo https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
    1. Mostrar los resultados siguientes
       a. VendorId Integer
       b. Tpep_pickup_datetime date

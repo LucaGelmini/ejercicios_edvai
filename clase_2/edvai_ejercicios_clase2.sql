@@ -57,7 +57,7 @@ ON o.customer_id = c.customer_id
 
 -- Ejercicio 13
 /*
- * Obtener el identificador del empleados, apellido, identificador de territorio y descripción
+ * Obtener el identificador del empleados, apellido, identificador de territorio y descripciï¿½n
 del territorio de todos los empleados y aquellos que hagan match en territorios:
  */
 SELECT e.employee_id ,e.last_name, et.territory_id ,t.territory_description 
@@ -68,7 +68,7 @@ LEFT JOIN territories t
 ON t.territory_id = et.territory_id 
 
 /*
- * 14. Obtener el identificador de la orden y el nombre de la empresa de todos las órdenes y
+ * 14. Obtener el identificador de la orden y el nombre de la empresa de todos las ï¿½rdenes y
  * aquellos clientes que hagan match:
 */
 SELECT o.order_id , c.company_name 
@@ -77,7 +77,7 @@ LEFT JOIN customers c
 ON c.customer_id = o.customer_id 
 
 /*
- * 15. Obtener el identificador de la orden, y el nombre de la compañía de todas las órdenes y
+ * 15. Obtener el identificador de la orden, y el nombre de la compaï¿½ï¿½a de todas las ï¿½rdenes y
  * aquellos clientes que hagan match:
  */
 SELECT o.order_id ,c.company_name  
@@ -87,8 +87,8 @@ ON c.customer_id = o.customer_id
 
 
 /*
- * 16. Obtener el nombre de la compañía, y la fecha de la orden de todas las órdenes y
- * aquellos transportistas que hagan match. Solamente para aquellas ordenes del año
+ * 16. Obtener el nombre de la compaï¿½ï¿½a, y la fecha de la orden de todas las ï¿½rdenes y
+ * aquellos transportistas que hagan match. Solamente para aquellas ordenes del aï¿½o
  * 1996:
 */
 SELECT c.company_name, o.order_date 
@@ -106,7 +106,7 @@ FULL JOIN employee_territories et
 ON et.employee_id = e.employee_id 
 
 /* 18. Obtener el identificador de la orden, precio unitario, cantidad y total de todas las
- * órdenes y aquellas órdenes detalles que hagan match o no
+ * ï¿½rdenes y aquellas ï¿½rdenes detalles que hagan match o no
  */
 SELECT o.order_id, od.unit_price , od.quantity, od.unit_price * od.quantity AS total
 FROM orders o
@@ -176,7 +176,7 @@ ON od.order_id = o.order_id
 GROUP BY o.order_id 
 
 -- 25. Obtener el promedio de productos en stock por producto
--- no entiendo la consigna, la tabla de productos no repite elementos e informa del stock. Entonces, ¿promedio de que?
+-- no entiendo la consigna, la tabla de productos no repite elementos e informa del stock. Entonces, ï¿½promedio de que?
 SELECT product_name , avg(units_in_stock) promedio_stock_por_producto
 FROM products p 
 GROUP BY product_id 
@@ -185,7 +185,7 @@ SELECT  avg(units_in_stock) AS promedio_de_stock
 FROM products p 
 
 
--- 26. Cantidad de productos en stock por producto, donde haya más de 100 productos en stock
+-- 26. Cantidad de productos en stock por producto, donde haya mï¿½s de 100 productos en stock
 -- no entiendo que es lo que quiere decir con productos en stock por producto. Yo interpreto que es la columna de stock en la tabla producto, pero no
 SELECT product_name , avg(units_in_stock) promedio_stock_por_producto
 FROM products p 
@@ -193,7 +193,7 @@ GROUP BY product_id
 HAVING units_in_stock > 100
 
 /*
-27. Obtener el promedio de frecuencia de pedidos por cada compañía y solo mostrar
+27. Obtener el promedio de frecuencia de pedidos por cada compaï¿½ï¿½a y solo mostrar
 aquellas con un promedio de frecuencia de pedidos superior a 10:
 -- la consigna no es clara y voy a suponer que se refiere a frecuencia por productos, podria ser frecuencia mensual
 */
@@ -227,8 +227,8 @@ FROM (
 GROUP BY f.customer_id
 HAVING  avg(f.products_by_customer)>10
 
-/* 28. Obtener el nombre del producto y su categoría, pero muestre "Discontinued" en lugar
-del nombre de la categoría si el producto ha sido descontinuado*/
+/* 28. Obtener el nombre del producto y su categorï¿½a, pero muestre "Discontinued" en lugar
+del nombre de la categorï¿½a si el producto ha sido descontinuado*/
 SELECT p.product_name,
 CASE 
 	WHEN p.discontinued = 0
@@ -238,8 +238,8 @@ CASE
 FROM products p
 LEFT JOIN categories c ON c.category_id = p.category_id 
 
-/* 29. Obtener el nombre del empleado y su título, pero muestre "Gerente de Ventas" en lugar
-del título si el empleado es un gerente de ventas (Sales Manager):*/
+/* 29. Obtener el nombre del empleado y su tï¿½tulo, pero muestre "Gerente de Ventas" en lugar
+del tï¿½tulo si el empleado es un gerente de ventas (Sales Manager):*/
 SELECT 
 	first_name, 
 	last_name,
