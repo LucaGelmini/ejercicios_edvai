@@ -7,4 +7,4 @@ echo -e "\n*********\n*********\n*********\n"
 
 $SPARK_SUBMIT_PATH $1
 
-echo -e "\nTERMINADO OK\n"
+echo -e "\n**********\nTERMINADO\n"
