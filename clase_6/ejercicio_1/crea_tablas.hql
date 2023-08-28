@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS payments
     total_amount float
 )
 STORED AS PARQUET;
-LOAD DATA INPATH '/ingest/yellow_tripdata_2021-01.parquet' INTO TABLE payments;
+
 
 CREATE TABLE IF NOT EXISTS passengers
 (
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS passengers
     total_amount float
 )
 STORED AS PARQUET;
-LOAD DATA INPATH '/ingest/yellow_tripdata_2021-01.parquet' INTO TABLE passengers;
+
 
 CREATE TABLE IF NOT EXISTS tolls
 (
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS tolls
     total_amount float
 )
 STORED AS PARQUET;
-LOAD DATA INPATH '/ingest/yellow_tripdata_2021-01.parquet' INTO TABLE tolls;
+
 
 CREATE TABLE IF NOT EXISTS congestion 
 (
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS congestion
     total_amount float
 )
 STORED AS PARQUET;
-LOAD DATA INPATH '/ingest/yellow_tripdata_2021-01.parquet' INTO TABLE congestion ;
+
 
 CREATE TABLE IF NOT EXISTS distance 
 (
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS distance
     total_amount float
 )
 STORED AS PARQUET;
-LOAD DATA INPATH '/ingest/yellow_tripdata_2021-01.parquet' INTO TABLE distance ;
+LOAD DATA INPATH '/ingest/yellow_tripdata_2021-01.parquet' INTO TABLE payment,passengers,tolls,congestiondistance ;
 
 
 DESCRIBE FORMATTED passengers;

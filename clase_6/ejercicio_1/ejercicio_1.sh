@@ -3,6 +3,6 @@ wget -P /home/hadoop/landing https://d37ci6vzurychx.cloudfront.net/trip-data/yel
 
 
 hdfs dfs -rm /ingest/yellow_tripdata_2021-01.parquet
-hdfs dfs -put /home/hadoop/landing/yellow_tripdata_2021-01.parquet /ingest
+hdfs dfs -put /home/hadoop/landing/yellow_tripdata_2021-01.parquet /ingest/yellow_tripdata_2021-01.parquet
 
 hive -f ./crea_tablas.hql
