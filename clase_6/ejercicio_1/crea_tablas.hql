@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS distance
     total_amount float
 )
 STORED AS PARQUET;
-LOAD DATA INPATH '/ingest/yellow_tripdata_2021-01.parquet' INTO TABLE payments,passengers,tolls,congestiondistance;
+LOAD DATA INPATH '/ingest/yellow_tripdata_2021-01.parquet' INTO TABLE payments,passengers,tolls,congestion,distance;
 
 
 DESCRIBE FORMATTED passengers;
