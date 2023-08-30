@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS congestion
 CREATE TABLE IF NOT EXISTS congestion 
 (
     tpep_pickup_datetetime,

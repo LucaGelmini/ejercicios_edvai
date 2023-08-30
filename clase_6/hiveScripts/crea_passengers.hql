@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS passengers
 CREATE TABLE IF NOT EXISTS passengers
 (
     tpep_pickup_datetetime,

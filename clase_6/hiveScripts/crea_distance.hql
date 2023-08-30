@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS distance
 CREATE TABLE IF NOT EXISTS distance 
 (
     tpep_pickup_datetetime,

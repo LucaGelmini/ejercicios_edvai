@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS  payments
 CREATE TABLE IF NOT EXISTS payments
 (
     VendorID,
