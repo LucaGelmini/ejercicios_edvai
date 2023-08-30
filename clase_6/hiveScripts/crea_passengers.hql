@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS passengers
 (
-    tpep_pickup_datetetime date,
-    passenger_count int,
-    total_amount float
+    tpep_pickup_datetetime,
+    passenger_count,
+    total_amount
 )
 STORED AS PARQUET;
 

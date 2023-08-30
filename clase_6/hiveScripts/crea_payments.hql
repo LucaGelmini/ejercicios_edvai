@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS payments
 (
-    VendorID int,
-    tpep_pickup_datetetime date,
-    payment_type int,
-    total_amount float
+    VendorID,
+    tpep_pickup_datetetime,
+    payment_type,
+    total_amount
 )
 STORED AS PARQUET;
 

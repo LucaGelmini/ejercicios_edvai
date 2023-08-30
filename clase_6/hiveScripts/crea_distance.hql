@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS distance 
 (
-    tpep_pickup_datetetime date,
-    passenger_count int,
-    trip_distance float,
-    total_amount float
+    tpep_pickup_datetetime,
+    passenger_count,
+    trip_distance,
+    total_amount
 )
 STORED AS PARQUET;
 

@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS congestion 
 (
-    tpep_pickup_datetetime date,
-    passenger_count int,
-    congestion_surcharge float,
-    total_amount float
+    tpep_pickup_datetetime,
+    passenger_count,
+    congestion_surcharge,
+    total_amount
 )
 STORED AS PARQUET;
 
