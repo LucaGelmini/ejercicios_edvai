@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS tolls
+DROP TABLE IF EXISTS tolls;
 CREATE TABLE IF NOT EXISTS tolls
 (
     tpep_pickup_datetetime,
