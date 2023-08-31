@@ -1,1 +1,1 @@
-source ../run_pyspark_script spark.py
+source ../run_pyspark_script.sh spark.py
