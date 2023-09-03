@@ -1,3 +1,0 @@
-
-DESCRIBE FORMATTED passengers;
-DESCRIBE FORMATTED distance;
