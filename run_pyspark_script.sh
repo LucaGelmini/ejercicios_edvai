@@ -1,5 +1,5 @@
 #!/bin/bash
-
+pwd
 source .env
 
 echo "Corriendo el programa: " $1
