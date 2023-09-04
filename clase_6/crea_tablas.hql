@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS tripdata_ejercicio CASCADE;
 CREATE DATABASE IF NOT EXISTS tripdata_ejercicio;
 
 USE tripdata_ejercicio;
