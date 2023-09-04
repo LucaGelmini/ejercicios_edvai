@@ -11,6 +11,11 @@ CREATE TABLE IF NOT EXISTS congestion
     congestion_surcharge DOUBLE,
     total_amount DOUBLE
 )
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
+)
 STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/ingest/ejercicio_6/congestion/yellow_tripdata_2021-01.csv' INTO TABLE congestion;
@@ -23,6 +28,11 @@ CREATE TABLE IF NOT EXISTS distance
     trip_distance DOUBLE,
     total_amount DOUBLE
 )
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
+)
 STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/ingest/ejercicio_6/distance/yellow_tripdata_2021-01.csv' INTO TABLE distance;
@@ -33,6 +43,11 @@ CREATE TABLE IF NOT EXISTS passengers
     tpep_pickup_datetetime STRING,
     passenger_count INT,
     total_amount DOUBLE
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
 )
 STORED AS TEXTFILE;
 
@@ -46,6 +61,11 @@ CREATE TABLE IF NOT EXISTS payments
     payment_type INT,
     total_amount DOUBLE
 )
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
+)
 STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/ingest/ejercicio_6/payments/yellow_tripdata_2021-01.csv' INTO TABLE payments;
@@ -57,6 +77,11 @@ CREATE TABLE IF NOT EXISTS tolls
     passenger_count INT,
     tolls_amount DOUBLE,
     total_amount DOUBLE
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
 )
 STORED AS TEXTFILE;
 
