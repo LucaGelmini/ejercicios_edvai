@@ -15,5 +15,9 @@ hdfs dfs -put /home/hadoop/landing/yellow_tripdata_2021-01.parquet /ingest/ejerc
 hdfs dfs -put /home/hadoop/landing/yellow_tripdata_2021-01.parquet /ingest/ejercicio_6/payments/yellow_tripdata_2021-01.parquet
 hdfs dfs -put /home/hadoop/landing/yellow_tripdata_2021-01.parquet /ingest/ejercicio_6/tolls/yellow_tripdata_2021-01.parquet
 
+rm /home/hadoop/landing/yellow_tripdata_2021-01.parquet
+hdfs dfs -rm -r /ingest/ejercicio_6/
 
 hive -f ./crea_tablas.hql
+
+
