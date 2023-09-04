@@ -1,5 +1,4 @@
-DROP DATABASE IF EXISTS tripdata_ejercicio;
-CREATE DATABASE tripdata_ejercicio;
+CREATE DATABASE IF NOT EXISTS tripdata_ejercicio;
 
 USE DATABASE tripdata_ejercicio;
 
