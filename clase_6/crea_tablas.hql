@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS tripdata_ejercicio;
 
-USE DATABASE tripdata_ejercicio;
+USE tripdata_ejercicio;
 
 DROP TABLE IF EXISTS congestion;
 CREATE TABLE IF NOT EXISTS congestion 
