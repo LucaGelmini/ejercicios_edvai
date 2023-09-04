@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS congestion
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
-STORED AS TEXTFILE;
+STORED AS TEXTFILE
+TBLPROPERTIES ("skip.header.line.count"="1");
 
 LOAD DATA INPATH '/ingest/ejercicio_6/congestion/yellow_tripdata_2021-01.csv' INTO TABLE congestion;
 
@@ -27,7 +28,8 @@ CREATE TABLE IF NOT EXISTS distance
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
-STORED AS TEXTFILE;
+STORED AS TEXTFILE
+TBLPROPERTIES ("skip.header.line.count"="1");
 
 LOAD DATA INPATH '/ingest/ejercicio_6/distance/yellow_tripdata_2021-01.csv' INTO TABLE distance;
 
@@ -41,7 +43,8 @@ CREATE TABLE IF NOT EXISTS passengers
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
-STORED AS TEXTFILE;
+STORED AS TEXTFILE
+TBLPROPERTIES ("skip.header.line.count"="1");
 
 LOAD DATA INPATH '/ingest/ejercicio_6/passengers/yellow_tripdata_2021-01.csv' INTO TABLE passengers;
 
@@ -55,7 +58,8 @@ CREATE TABLE IF NOT EXISTS payments
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
-STORED AS TEXTFILE;
+STORED AS TEXTFILE
+TBLPROPERTIES ("skip.header.line.count"="1");
 
 LOAD DATA INPATH '/ingest/ejercicio_6/payments/yellow_tripdata_2021-01.csv' INTO TABLE payments;
 
@@ -69,7 +73,8 @@ CREATE TABLE IF NOT EXISTS tolls
 )
    ROW FORMAT DELIMITED
    FIELDS TERMINATED BY ','
-   STORED AS TEXTFILE;
+   STORED AS TEXTFILE
+   TBLPROPERTIES ("skip.header.line.count"="1");
 
 LOAD DATA INPATH '/ingest/ejercicio_6/tolls/yellow_tripdata_2021-01.csv' INTO TABLE tolls;
 
