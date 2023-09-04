@@ -11,10 +11,12 @@ CREATE TABLE IF NOT EXISTS congestion
     congestion_surcharge DOUBLE,
     total_amount DOUBLE
 )
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-STORED AS TEXTFILE
-TBLPROPERTIES ("skip.header.line.count"="1");
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
+)
+STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/ingest/ejercicio_6/congestion/yellow_tripdata_2021-01.csv' INTO TABLE congestion;
 
@@ -26,10 +28,12 @@ CREATE TABLE IF NOT EXISTS distance
     trip_distance DOUBLE,
     total_amount DOUBLE
 )
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-STORED AS TEXTFILE
-TBLPROPERTIES ("skip.header.line.count"="1");
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
+)
+STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/ingest/ejercicio_6/distance/yellow_tripdata_2021-01.csv' INTO TABLE distance;
 
@@ -41,10 +45,12 @@ CREATE TABLE IF NOT EXISTS passengers
     passenger_count INT,
     total_amount DOUBLE
 )
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-STORED AS TEXTFILE
-TBLPROPERTIES ("skip.header.line.count"="1");
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
+)
+STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/ingest/ejercicio_6/passengers/yellow_tripdata_2021-01.csv' INTO TABLE passengers;
 
@@ -56,10 +62,12 @@ CREATE TABLE IF NOT EXISTS payments
     payment_type INT,
     total_amount DOUBLE
 )
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-STORED AS TEXTFILE
-TBLPROPERTIES ("skip.header.line.count"="1");
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
+)
+STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/ingest/ejercicio_6/payments/yellow_tripdata_2021-01.csv' INTO TABLE payments;
 
@@ -71,10 +79,12 @@ CREATE TABLE IF NOT EXISTS tolls
     tolls_amount DOUBLE,
     total_amount DOUBLE
 )
-   ROW FORMAT DELIMITED
-   FIELDS TERMINATED BY ','
-   STORED AS TEXTFILE
-   TBLPROPERTIES ("skip.header.line.count"="1");
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+    'separatorChar' = ',',
+    'quoteChar' = '\"'
+)
+STORED AS TEXTFILE;
 
 LOAD DATA INPATH '/ingest/ejercicio_6/tolls/yellow_tripdata_2021-01.csv' INTO TABLE tolls;
 
