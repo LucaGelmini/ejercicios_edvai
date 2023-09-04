@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS congestion
     congestion_surcharge DOUBLE,
     total_amount DOUBLE
 )
-STORED AS PARQUET;
+STORED AS TEXTFILE;
 
-LOAD DATA INPATH '/ingest/ejercicio_6/congestion/yellow_tripdata_2021-01.parquet' INTO TABLE congestion;
+LOAD DATA INPATH '/ingest/ejercicio_6/congestion/yellow_tripdata_2021-01.csv' INTO TABLE congestion;
 
 DROP TABLE IF EXISTS distance;
 CREATE TABLE IF NOT EXISTS distance 
@@ -23,9 +23,9 @@ CREATE TABLE IF NOT EXISTS distance
     trip_distance DOUBLE,
     total_amount DOUBLE
 )
-STORED AS PARQUET;
+STORED AS TEXTFILE;
 
-LOAD DATA INPATH '/ingest/ejercicio_6/distance/yellow_tripdata_2021-01.parquet' INTO TABLE distance;
+LOAD DATA INPATH '/ingest/ejercicio_6/distance/yellow_tripdata_2021-01.csv' INTO TABLE distance;
 
 DROP TABLE IF EXISTS passengers;
 CREATE TABLE IF NOT EXISTS passengers
@@ -34,9 +34,9 @@ CREATE TABLE IF NOT EXISTS passengers
     passenger_count INT,
     total_amount DOUBLE
 )
-STORED AS PARQUET;
+STORED AS TEXTFILE;
 
-LOAD DATA INPATH '/ingest/ejercicio_6/passengers/yellow_tripdata_2021-01.parquet' INTO TABLE passengers;
+LOAD DATA INPATH '/ingest/ejercicio_6/passengers/yellow_tripdata_2021-01.csv' INTO TABLE passengers;
 
 DROP TABLE IF EXISTS  payments;
 CREATE TABLE IF NOT EXISTS payments
@@ -46,9 +46,9 @@ CREATE TABLE IF NOT EXISTS payments
     payment_type INT,
     total_amount DOUBLE
 )
-STORED AS PARQUET;
+STORED AS TEXTFILE;
 
-LOAD DATA INPATH '/ingest/ejercicio_6/payments/yellow_tripdata_2021-01.parquet' INTO TABLE payments;
+LOAD DATA INPATH '/ingest/ejercicio_6/payments/yellow_tripdata_2021-01.csv' INTO TABLE payments;
 
 DROP TABLE IF EXISTS tolls;
 CREATE TABLE IF NOT EXISTS tolls
@@ -58,9 +58,9 @@ CREATE TABLE IF NOT EXISTS tolls
     tolls_amount DOUBLE,
     total_amount DOUBLE
 )
-STORED AS PARQUET;
+STORED AS TEXTFILE;
 
-LOAD DATA INPATH '/ingest/ejercicio_6/tolls/yellow_tripdata_2021-01.parquet' INTO TABLE tolls;
+LOAD DATA INPATH '/ingest/ejercicio_6/tolls/yellow_tripdata_2021-01.csv' INTO TABLE tolls;
 
 DESCRIBE FORMATTED passengers;
 DESCRIBE FORMATTED distance;
