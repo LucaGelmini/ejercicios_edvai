@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS tripdata_ejercicio;
 CREATE DATABASE tripdata_ejercicio;
 
 USE DATABASE tripdata_ejercicio;
