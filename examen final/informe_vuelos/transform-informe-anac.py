@@ -1,12 +1,12 @@
 from pyspark.context import SparkContext
 from pyspark.sql.session import SparkSession
+from pyspark.sql import HiveContext
 from pyspark.sql import DataFrame
 from pyspark.sql.functions import col, to_timestamp, concat, lit, coalesce
 sc = SparkContext('local')
 spark = SparkSession(sc)
-
-from pyspark.sql import HiveContext
 hc = HiveContext(sc)
+
 
 def limpia_columnas(df:DataFrame):
     for col in df.columns:
@@ -35,7 +35,11 @@ df_vuelos_2021 = (
     .option("header", "true")
     .option("sep", ";")
     .csv("hdfs://172.17.0.2:9000/ingest/2021-informe-ministerio.csv"))
-
+df_vuelos_2021.write.parquet(
+    "hdfs://172.17.0.2:9000/ingest/202206-informe-ministerio.csv",
+    mode="overwrite",
+    
+)
 df_vuelos_2022 = (
     spark.read
     .option("header", "true")

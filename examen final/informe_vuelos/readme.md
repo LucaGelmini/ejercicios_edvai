@@ -16,20 +16,20 @@ El proceso completo se ejecuta desde Airflow, con el DAG `dag-informe-anac.py`
 ### Análisis de datos
 Esquema de tablas:
 - Esquema de tabla vuelos
-![DAG de Airflow](screenshots/esquema_aeropuertos.jpg)
+![Esquema de las tablas](screenshots/esquema_aeropuertos.jpg)
 - Esuema de tabla aeropuertos
-![DAG de Airflow](screenshots/esquema_vuelos.jpg)
+![Esquema de las tablas](screenshots/esquema_vuelos.jpg)
 
 6. Determinar la cantidad de vuelos entre las fechas 01/12/2021 y 31/01/2022. Mostrar consulta y Resultado de la query
-   ![DAG de Airflow](screenshots/queries_6.jpg)
+  ![Consultas SQL](screenshots/queries_6.jpg)
 7. Cantidad de pasajeros que viajaron en Aerolíneas Argentinas entre el 01/01/2021 y 30/06/2022. Mostrar consulta y Resultado de la query
-   ![DAG de Airflow](screenshots/queries_7.jpg)
+  ![Consultas SQL](screenshots/queries_7.jpg)
 8. Mostrar fecha, hora, código aeropuerto salida, ciudad de salida, código de aeropuerto de arribo, ciudad de arribo, y cantidad de pasajeros de cada vuelo, entre el 01/01/2022 y el 30/06/2022 ordenados por fecha de manera descendiente. Mostrar consulta y Resultado de la query
-   ![DAG de Airflow](screenshots/queries_8.jpg)
+  ![Consultas SQL](screenshots/queries_8.jpg)
 9.  Cuales son las 10 aerolíneas que más pasajeros llevaron entre el 01/01/2021 y el 30/06/2022 exceptuando aquellas aerolíneas que no tengan nombre. Mostrar consulta y Visualización
-    ![DAG de Airflow](screenshots/queries_9.jpg)
+  ![Consultas SQL](screenshots/queries_9.jpg)
 10.  Cuales son las 10 aeronaves más utilizadas entre el 01/01/2021 y el 30/06/22 que despegaron desde la Ciudad autónoma de Buenos Aires o de Buenos Aires, exceptuando aquellas aeronaves que no cuentan con nombre. Mostrar consulta y Visualización
-    ![DAG de Airflow](screenshots/queries_10.jpg)
+  ![Consultas SQL](screenshots/queries_10.jpg)
 
 ## Conclusiones
 - **¿Agregaría datos externos?**
